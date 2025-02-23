@@ -33,7 +33,7 @@ translator = ProblemTranslator(
 )
 problem = "Optimize portfolio for 10% risk tolerance"
 circuit = translator.generate_circuit(problem, num_qubits=12)
-
+```
 Key Features
 1. Hybrid Quantum-Classical Engine
 Component	Technology Stack	Description
@@ -48,9 +48,8 @@ Feature Store: PostgreSQL + Redis caching
 AES-256 encryption for data at rest
 OAuth 2.0/JWT for API access
 Quantum-safe TLS 1.3 (experimental CRYSTALS-Kyber)
-Technical Architecture
-mermaid
 
+```
 graph TD
     A[User Interface] -->|NLP Query| B(Problem Translator)
     B --> C{Quantum Backend}
@@ -60,24 +59,30 @@ graph TD
     E --> F
     F --> G[ROI Dashboard]
     G --> H[User Feedback]
+```
+
 Installation & Setup
 Prerequisites
+```
 Python 3.10+
 IBM Quantum API token
 Docker 20.10+
 bash
- 
+ ```
 # Set up virtual environment
+```
 python -m venv qenv
 source qenv/bin/activate
-
+```
 # Install quantum dependencies
+```
 pip install -r requirements-quantum.txt
-
+```
 # Configure environment variables
+```
 echo "IBMQ_TOKEN=your_ibm_token" >> .env
 echo "DWAVE_API_KEY=your_dwave_key" >> .env
-
+```
 # Launch hybrid backend
 ```
 docker-compose up --build
@@ -99,7 +104,9 @@ result = optimizer.run(
     shots=1000
 )
 print(f"Optimal allocation: {result.optimal_allocation}")
+```
 Supply Chain Routing
+```
 bash
 
 curl -X POST https://api.qpaas.com/v1/supply-chain \
@@ -130,8 +137,7 @@ NLP query expansion
 
 This README includes:
 
-Technical implementation details of quantum-classical integration
-Architecture diagrams (Mermaid.js format)
+Technical implementation details of quantum-classical integration 
 Code snippets for key use cases
 Clear installation instructions with quantum hardware requirements
 Roadmap aligned with original project phases
